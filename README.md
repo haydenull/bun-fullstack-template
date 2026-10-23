@@ -31,6 +31,12 @@ bun run build:client     # 以 production 构建前端到 dist
 bun run start            # 启动生产服务器
 bun run test             # 运行 Vitest
 bun run typecheck        # tsc --noEmit
+bun run lint             # Biome lint
+bun run lint:fix         # 应用 Biome 的安全 lint 修复
+bun run format           # 用 Biome 格式化
+bun run format:check     # 只检查格式
+bun run check            # 格式、lint 和 import 整理
+bun run check:fix        # 应用安全的自动修复
 bun run db:generate      # 根据 schema 生成 SQL 迁移
 bun run db:migrate       # 用 Bun 执行迁移
 bun run db:studio        # 打开 Drizzle Studio

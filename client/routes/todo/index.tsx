@@ -1,6 +1,7 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import { createFileRoute } from '@tanstack/react-router'
-import { useState, type FormEvent } from 'react'
+import type { FormEvent } from 'react'
+import { useState } from 'react'
 
 import { createTodo, deleteTodo, todoListQueryOptions, todoQueryKeys, updateTodo } from './-query'
 

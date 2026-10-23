@@ -1,8 +1,9 @@
 import type { QueryClient } from '@tanstack/react-query'
-import { Link, Outlet, createRootRouteWithContext } from '@tanstack/react-router'
-import { Suspense, lazy } from 'react'
+import { createRootRouteWithContext, Link, Outlet } from '@tanstack/react-router'
+import { lazy, Suspense } from 'react'
 
-import { useTheme, type Theme } from '@/client/components/theme-provider'
+import type { Theme } from '@/client/components/theme-provider'
+import { useTheme } from '@/client/components/theme-provider'
 
 const TanStackRouterDevtools = import.meta.env.PROD
   ? () => null
@@ -35,12 +36,7 @@ function RootComponent() {
           <Link to="/todo" className="text-sm text-zinc-600 dark:text-zinc-300">
             Todo
           </Link>
-          <a
-            href="/api/doc"
-            target="_blank"
-            rel="noreferrer"
-            className="text-sm text-zinc-600 dark:text-zinc-300"
-          >
+          <a href="/api/doc" target="_blank" rel="noreferrer" className="text-sm text-zinc-600 dark:text-zinc-300">
             API 文档
           </a>
           <button
